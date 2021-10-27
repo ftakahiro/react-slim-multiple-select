@@ -1,0 +1,59 @@
+{
+  "name": "react-slim-multiple-select",
+  "version": "0.0.1",
+  "description": "simple multiple selection component with search.",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "src/lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftakahiro/react-slim-multiple-select.git"
+  },
+  "keywords": [
+    "react",
+    "multiple",
+    "select",
+    "slim",
+    "dropdown",
+    "component",
+    "lightweight"
+  ],
+  "author": "takahiro fujita",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ftakahiro/react-slim-multiple-select/issues"
+  },
+  "homepage": "https://github.com/ftakahiro/react-slim-multiple-select#readme",
+  "dependencies": {
+    "cra-template": "1.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rm -rf dist && babel src/lib --out-dir dist --copy-files",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5"
+  }
+}
