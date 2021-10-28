@@ -24,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/ftakahiro/react-slim-multiple-select/issues"
   },
-  "homepage": "https://github.com/ftakahiro/react-slim-multiple-select#readme",
   "peerDependencies": {
     "react-dom": "^17.0.2",
     "react": "^17.0.2"
