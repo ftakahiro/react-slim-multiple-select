@@ -1,6 +1,6 @@
 {
   "name": "react-slim-multiple-select",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "simple multiple selection component with search.",
   "main": "dist/index.js",
   "directories": {
