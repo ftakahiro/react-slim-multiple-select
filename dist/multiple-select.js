@@ -5,13 +5,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
 require("./multiple-select.css");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -150,23 +150,23 @@ var SlimMultipleSelect = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this5 = this;
 
-      return /*#__PURE__*/_react.default.createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement("div", {
         className: "react-slim-multiple-select"
-      }, /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react["default"].createElement("div", {
         className: "react-slim-multiple-select-input-container",
         onClick: this.toggleOptions
-      }, /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react["default"].createElement("div", {
         className: "react-slim-multiple-select-selected-options-container"
       }, this.state.selectedOptions.map(function (option) {
-        return /*#__PURE__*/_react.default.createElement("span", {
+        return /*#__PURE__*/_react["default"].createElement("span", {
           key: option[_this5.props.optKey],
           className: "react-slim-multiple-select-selected-option-container"
-        }, /*#__PURE__*/_react.default.createElement("span", null, option[_this5.props.optLabel]), /*#__PURE__*/_react.default.createElement("i", {
+        }, /*#__PURE__*/_react["default"].createElement("span", null, option[_this5.props.optLabel]), /*#__PURE__*/_react["default"].createElement("i", {
           className: "react-slim-multiple-select-icon-remove material-icons",
           onClick: _this5.removeOption,
           "data-key": option[_this5.props.optKey]
         }, "close"));
-      })), /*#__PURE__*/_react.default.createElement("input", {
+      })), /*#__PURE__*/_react["default"].createElement("input", {
         className: "react-slim-multiple-select-search",
         name: "scope",
         onInput: this.onFilter,
@@ -174,10 +174,10 @@ var SlimMultipleSelect = /*#__PURE__*/function (_React$Component) {
           e.stopPropagation();
         },
         placeholder: this.props.placeholder || ""
-      })), this.props.options.length > 0 && /*#__PURE__*/_react.default.createElement("div", {
+      })), this.props.options.length > 0 && /*#__PURE__*/_react["default"].createElement("div", {
         className: "react-slim-multiple-select-options-container"
       }, this.state.filterdOptions.map(function (option) {
-        return /*#__PURE__*/_react.default.createElement("div", {
+        return /*#__PURE__*/_react["default"].createElement("div", {
           className: "react-slim-multiple-select-option-container ".concat(_this5.toggleUsed(option)),
           key: option[_this5.props.optKey],
           "data-key": option[_this5.props.optKey],
@@ -189,6 +189,6 @@ var SlimMultipleSelect = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return SlimMultipleSelect;
-}(_react.default.Component);
+}(_react["default"].Component);
 
-exports.default = SlimMultipleSelect;
+exports["default"] = SlimMultipleSelect;
