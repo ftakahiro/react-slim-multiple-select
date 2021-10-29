@@ -11,6 +11,9 @@ export default class SlimMultipleSelect extends React.Component {
         this.onFilter = this.onFilter.bind(this);
         this.choseOption = this.choseOption.bind(this);
         this.removeOption = this.removeOption.bind(this);
+        this.toggleUsed = this.toggleUsed.bind(this);
+        this.toggleChecked = this.toggleChecked.bind(this);
+        this.isUsed = this.isUsed.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -35,6 +38,14 @@ export default class SlimMultipleSelect extends React.Component {
     }
 
     toggleUsed(option) {
+        return this.isUsed(option) ? "used" : "";
+    }
+
+    toggleChecked(option) {
+        return this.isUsed(option) ? "check_box" : "check_box_outline_blank";
+    }
+
+    isUsed(option) {
         let isSelected = false;
         for (let i = 0; i < this.state.selectedOptions.length; i++) {
             if (
@@ -44,8 +55,7 @@ export default class SlimMultipleSelect extends React.Component {
                 isSelected = true;
             }
         }
-
-        return isSelected ? "used" : "";
+        return isSelected;
     }
 
     choseOption(e) {
@@ -102,12 +112,17 @@ export default class SlimMultipleSelect extends React.Component {
                             );
                         })}
                     </div>
-                    <input
-                        className='react-slim-multiple-select-search'
-                        name='scope'
-                        onInput={this.onFilter}
-                        onClick={(e) => { e.stopPropagation() }}
-                        placeholder={this.props.placeholder || ""}></input>
+                    <div className="react-slim-multiple-select-search-container">
+                        <input
+                            className='react-slim-multiple-select-search'
+                            onInput={this.onFilter}
+                            onClick={(e) => { e.stopPropagation() }}
+                            placeholder={this.props.placeholder || ""}></input>
+                        <i
+                            className='react-slim-multiple-dropdown-icon material-icons'>
+                            arrow_drop_down
+                        </i>
+                    </div>
                 </div>
                 {this.props.options.length > 0 && (
                     <div className='react-slim-multiple-select-options-container'>
@@ -121,7 +136,11 @@ export default class SlimMultipleSelect extends React.Component {
                                     data-key={option[this.props.optKey]}
                                     data-value={option[this.props.optLabel]}
                                     onMouseDown={this.choseOption}>
-                                    {option[this.props.optLabel]}
+                                    <i
+                                        className='react-slim-multiple-checkbox-icon material-icons'>
+                                        {this.toggleChecked(option)}
+                                    </i>
+                                    <div>{option[this.props.optLabel]}</div>
                                 </div>
                             );
                         })}
