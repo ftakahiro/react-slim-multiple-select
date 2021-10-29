@@ -1,9 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import SlimMultipleSelect from './lib/index';
+import React from "react";
+import ReactDOM from "react-dom";
+import SlimMultipleSelect from "./lib/index";
 
 ReactDOM.render(
-
     <SlimMultipleSelect
         options={[
             { id: 1, name: "sample item 1" },
@@ -22,8 +21,6 @@ ReactDOM.render(
         optKey='id'
         placeholder='search item'
         onHandleChange={(value) => console.log(value)}
-    />
- ,
-  document.getElementById('root')
+    />,
+    document.getElementById("root")
 );
-

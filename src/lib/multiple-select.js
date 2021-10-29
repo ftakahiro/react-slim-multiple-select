@@ -1,5 +1,5 @@
 import React from "react";
-import './multiple-select.css';
+import "./multiple-select.css";
 
 export default class SlimMultipleSelect extends React.Component {
     constructor(props) {
@@ -25,7 +25,7 @@ export default class SlimMultipleSelect extends React.Component {
         }
     }
 
-    toggleOptions(e){
+    toggleOptions(e) {
         e.currentTarget.nextSibling.classList.toggle("open");
     }
 
@@ -94,7 +94,9 @@ export default class SlimMultipleSelect extends React.Component {
     render() {
         return (
             <div className='react-slim-multiple-select'>
-                <div className='react-slim-multiple-select-input-container' onClick={this.toggleOptions}>
+                <div
+                    className='react-slim-multiple-select-input-container'
+                    onClick={this.toggleOptions}>
                     <div className='react-slim-multiple-select-selected-options-container'>
                         {this.state.selectedOptions.map((option) => {
                             return (
@@ -112,14 +114,15 @@ export default class SlimMultipleSelect extends React.Component {
                             );
                         })}
                     </div>
-                    <div className="react-slim-multiple-select-search-container">
+                    <div className='react-slim-multiple-select-search-container'>
                         <input
                             className='react-slim-multiple-select-search'
                             onInput={this.onFilter}
-                            onClick={(e) => { e.stopPropagation() }}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                            }}
                             placeholder={this.props.placeholder || ""}></input>
-                        <i
-                            className='react-slim-multiple-dropdown-icon material-icons'>
+                        <i className='react-slim-multiple-dropdown-icon material-icons'>
                             arrow_drop_down
                         </i>
                     </div>
@@ -136,8 +139,7 @@ export default class SlimMultipleSelect extends React.Component {
                                     data-key={option[this.props.optKey]}
                                     data-value={option[this.props.optLabel]}
                                     onMouseDown={this.choseOption}>
-                                    <i
-                                        className='react-slim-multiple-checkbox-icon material-icons'>
+                                    <i className='react-slim-multiple-checkbox-icon material-icons'>
                                         {this.toggleChecked(option)}
                                     </i>
                                     <div>{option[this.props.optLabel]}</div>
