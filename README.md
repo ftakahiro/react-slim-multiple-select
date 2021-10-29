@@ -1,5 +1,7 @@
 # React Slim Multiple Select
 
+![react-multiple-select-dropdown-menu](screenshot/react-slim-multiple-select-2021-10-30.gif)
+
 ## Installation
 
 ```
