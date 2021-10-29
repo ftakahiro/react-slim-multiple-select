@@ -32,6 +32,7 @@
 .react-slim-multiple-select-search {
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .react-slim-multiple-select-options-container {
