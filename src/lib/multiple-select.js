@@ -5,8 +5,8 @@ export default class SlimMultipleSelect extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            filterdOptions: this.props.options,
-            selectedOptions: this.props.value,
+            filterdOptions: this.props.options || [],
+            selectedOptions: this.props.value || [],
         };
         this.onFilter = this.onFilter.bind(this);
         this.choseOption = this.choseOption.bind(this);
@@ -127,9 +127,10 @@ export default class SlimMultipleSelect extends React.Component {
                         </i>
                     </div>
                 </div>
-                {this.props.options.length > 0 && (
-                    <div className='react-slim-multiple-select-options-container'>
-                        {this.state.filterdOptions.map((option) => {
+                <div className='react-slim-multiple-select-options-container'>
+                    {this.props.options &&
+                        this.props.options.length > 0 &&
+                        this.state.filterdOptions.map((option) => {
                             return (
                                 <div
                                     className={`react-slim-multiple-select-option-container ${this.toggleUsed(
@@ -146,8 +147,7 @@ export default class SlimMultipleSelect extends React.Component {
                                 </div>
                             );
                         })}
-                    </div>
-                )}
+                </div>
             </div>
         );
     }

@@ -45,8 +45,8 @@ var SlimMultipleSelect = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      filterdOptions: _this.props.options,
-      selectedOptions: _this.props.value
+      filterdOptions: _this.props.options || [],
+      selectedOptions: _this.props.value || []
     };
     _this.onFilter = _this.onFilter.bind(_assertThisInitialized(_this));
     _this.choseOption = _this.choseOption.bind(_assertThisInitialized(_this));
@@ -190,9 +190,9 @@ var SlimMultipleSelect = /*#__PURE__*/function (_React$Component) {
         placeholder: this.props.placeholder || ""
       }), /*#__PURE__*/_react["default"].createElement("i", {
         className: "react-slim-multiple-dropdown-icon material-icons"
-      }, "arrow_drop_down"))), this.props.options.length > 0 && /*#__PURE__*/_react["default"].createElement("div", {
+      }, "arrow_drop_down"))), /*#__PURE__*/_react["default"].createElement("div", {
         className: "react-slim-multiple-select-options-container"
-      }, this.state.filterdOptions.map(function (option) {
+      }, this.props.options && this.props.options.length > 0 && this.state.filterdOptions.map(function (option) {
         return /*#__PURE__*/_react["default"].createElement("div", {
           className: "react-slim-multiple-select-option-container ".concat(_this5.toggleUsed(option)),
           key: option[_this5.props.optKey],
