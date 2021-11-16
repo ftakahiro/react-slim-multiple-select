@@ -198,7 +198,7 @@ var SlimMultipleSelect = /*#__PURE__*/function (_React$Component) {
           key: option[_this5.props.optKey],
           "data-key": option[_this5.props.optKey],
           "data-value": option[_this5.props.optLabel],
-          onMouseDown: _this5.choseOption
+          onClick: _this5.choseOption
         }, /*#__PURE__*/_react["default"].createElement("i", {
           className: "react-slim-multiple-checkbox-icon material-icons"
         }, _this5.toggleChecked(option)), /*#__PURE__*/_react["default"].createElement("div", null, option[_this5.props.optLabel]));

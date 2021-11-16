@@ -139,7 +139,7 @@ export default class SlimMultipleSelect extends React.Component {
                                     key={option[this.props.optKey]}
                                     data-key={option[this.props.optKey]}
                                     data-value={option[this.props.optLabel]}
-                                    onMouseDown={this.choseOption}>
+                                    onClick={this.choseOption}>
                                     <i className='react-slim-multiple-checkbox-icon material-icons'>
                                         {this.toggleChecked(option)}
                                     </i>
