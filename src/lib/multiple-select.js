@@ -26,6 +26,7 @@ export default class SlimMultipleSelect extends React.Component {
     }
 
     toggleOptions(e) {
+        e.stopPropagation();
         e.currentTarget.nextSibling.classList.toggle("open");
     }
 

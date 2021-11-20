@@ -75,6 +75,7 @@ var SlimMultipleSelect = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "toggleOptions",
     value: function toggleOptions(e) {
+      e.stopPropagation();
       e.currentTarget.nextSibling.classList.toggle("open");
     }
   }, {
